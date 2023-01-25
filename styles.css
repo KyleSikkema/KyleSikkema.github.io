@@ -1,5 +1,5 @@
     body {
-    background-color: whitesmoke;
+    background-color: lightslategray;
 }
 
     .nav {
@@ -7,7 +7,7 @@
     float: left;
     padding: 20px;
     height: 50px;
-    border: 5px solid black;
+    border: 5px solid lightslategrey;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,13 @@
     box-sizing: border-box;
     background-color: darkcyan;
   }
+    .section{
+      background-color: aliceblue;
+      height: 200px
+    }
     h1 {
     display: flex;
-    color: white;
+    color: azure;
     text-align: center;
     justify-content: center;
     align-items: center;
