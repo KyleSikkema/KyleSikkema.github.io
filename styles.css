@@ -1,0 +1,35 @@
+    body {
+    background-color: whitesmoke;
+}
+
+    .nav {
+    display: flex;
+    float: left;
+    padding: 20px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: darkcyan;
+  }
+    h1 {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    box-sizing: border-box;
+    background-image: url("top.jpg");
+    background-size: cover;
+    
+  }
+  
+    p {
+    font-family: verdana;
+    font-size: 20px;
+  }
