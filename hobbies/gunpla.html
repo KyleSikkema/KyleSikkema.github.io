@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide">Kyle Sikkema</div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+  
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <h3 class="w3-wide"><b>Kyle Sikkema's GitHub Page</b></h3>
+    </div>
+    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../aboutMe/aboutMe.html" class="w3-bar-item w3-button">About Me</a>
+      <a onclick="myAccFunc('demoAcc1')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+          Projects <i class="fa fa-caret-down"></i>
+        </a>
+        <div id="demoAcc1" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="../projects/fracturedKnight.html" class="w3-bar-item w3-button">2D Platformer</a>
+        </div>
+      <a onclick="myAccFunc('demoAcc2')" href="javascript:void(1)" class="w3-button w3-block w3-white w3-left-align" id="myBtn1">
+        Hobbies <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demoAcc2" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="drawing.html" class="w3-bar-item w3-button">Drawing</a>
+        <a href="gunpla.html" class="w3-bar-item w3-button">Gunpla</a>
+        <a href="writing.html" class="w3-bar-item w3-button">Writing</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:300px; overflow-y:scroll; min-height: 100%; margin-bottom: 100px;">
+
+    <!-- Header -->
+    <header id="portfolio">
+      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-container">
+      <h1><b>Gunpla Builds</b></h1>
+      </div>
+    </header>
+    
+    <div class="picture conatiner" style="margin-bottom: 150px; min-height: 100%;">
+      <div class="w3-row-padding">
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="../images/gunpla1.jpg" alt="MG Gundam Deathscythe Hell" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)">
+          <div class="w3-container w3-white">
+            <p><b>MG Gundam Deathscythe Hell</b></p>
+          </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom">
+          <img src="../images/gunpla2.jpg" alt="MG Justice Gundam" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)">
+          <div class="w3-container w3-white">
+            <p><b>MG Justice Gundam</b></p>
+          </div>
+        </div>
+        <div class="w3-third w3-container">
+          <img src="../images/gunpla3.jpg" alt="HG Builds" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)">
+          <div class="w3-container w3-white">
+            <p><b>HG Builds</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+          <img id="img01" class="w3-image">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+  
+
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" style="position: fixed; width:100%; bottom: 0;">
+    <div class="w3-row-padding">
+      <div class="w3-col">
+        <h4>Important Links</h4>
+        <p><a href="https://www.linkedin.com/in/kyle-sikkema-577599180/">LinkedIn</a></p>
+        <p><a href="https://github.com/KyleSikkema">GitHub</a></p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- END MAIN -->
+
+<script>
+    // Accordion 
+    function myAccFunc(name) {
+      var x = document.getElementById(name);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    
+    document.getElementById("myBtn").click();
+    
+    
+    // Open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+}
+    </script>
+
+</body>
+</html>
